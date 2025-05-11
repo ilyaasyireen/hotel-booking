@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The White Lily</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<header>
+    <div class="header">
+        <h1>
+           <a href="admin.html">The White Lily</a>
+        </h1>
+    </div>
+</header>
+    <body>
+    <div class="container">
+        <table class="table admin-table">
+            <thead>
+                <tr>
+                    <th>Room Type</th>
+                    <th>Guest Name</th>
+                    <th>Check-In</th>
+                    <th>Check-Out</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- example for testing-->
+                <tr>
+                    <td>Family Villa</td>
+                    <td>Ria</td>
+                    <td>2025-05-15</td>
+                    <td>2025-05-17</td>
+                    <td>
+                        <button class="btn-small">Edit</button>
+                        <form action="/delete-booking" method="post" style="display:inline;">
+                            <button class="btn-small danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#addBookingModal" class="btn">Add Booking</a>
+    </div>
+
+  <div id="addBookingModal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <h2>Add Booking</h2>
+      <form action="/add-booking" method="post">
+        <label>Room Type:</label>
+        <input type="text" name="room_type" required>
+
+        <label>Guest Name:</label>
+        <input type="text" name="guest_name" required>
+
+        <label>Check-In Date:</label>
+        <input type="date" name="check_in" required>
+
+        <label>Check-Out Date:</label>
+        <input type="date" name="check_out" required>
+
+        <button type="submit">Add Booking</button>
+      </form>
+    </div>
+  </div>
+    </body>
+<footer>
+    &copy; 2025 The White Lily | TT1L Group 9
+</footer>
+</html>
